@@ -28,6 +28,9 @@ const LeftContainer = styled.div`
   height: 100vh;
   background-color: #59d7eb;
   background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end
 `;
 
 const RightContainer = styled.div`
@@ -49,7 +52,10 @@ const RightText = styled.p`
 const Left = () => {
   return (
     <>
-      <LeftText>자라;;</LeftText>
+      <LeftText><p>ChalsBlog</p></LeftText>
+      <button>Github</button>
+      <button>Instagram</button>
+      <button>Facebook</button>
     </>
   );
 };
