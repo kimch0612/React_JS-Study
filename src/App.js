@@ -30,10 +30,12 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
   flex-direction: row;
+
 `;
 
 const LeftText = styled.p`
@@ -46,7 +48,6 @@ const RightText = styled.p`
   font-size: 30px;
   margin: 20px;
   color: rgb(0, 0, 0);
-  width: 1000px;
 `;
 
 const OutUpPost = styled.div`
@@ -54,6 +55,7 @@ const OutUpPost = styled.div`
   height:200px;
   display:inline-block;
   background-color: white;
+  margin: 100px; 50px; 50px; 50px;
 `;
 const InUpPost = styled.div`
   width:400px;
@@ -76,8 +78,10 @@ const Left = () => {
 const Right = () => {
   return (
     <RightContainer>
-      <RightText><p>최근 게시물</p></RightText>
-      <OutUpPost><InUpPost></InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>asdf1</InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>asdf2</InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>asdf3</InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>asdf4</InUpPost></OutUpPost>
     </RightContainer>
   );
 };
