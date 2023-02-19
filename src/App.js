@@ -4,12 +4,8 @@ import styled from "styled-components"
 const App = () => {
   return(
     <MainContainer>
-      <LeftContainer>
         <Left />
-      </LeftContainer>
-      <RightContainer>
         <Right />
-      </RightContainer>
     </MainContainer>
   );
 };
@@ -34,7 +30,10 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: column;
+  flex-direction: row;
 `;
 
 const LeftText = styled.p`
@@ -44,27 +43,42 @@ const LeftText = styled.p`
 `;
 
 const RightText = styled.p`
-  font-size: 50px;
-  margin: 0px;
+  font-size: 30px;
+  margin: 20px;
   color: rgb(0, 0, 0);
+  width: 1000px;
+`;
+
+const OutUpPost = styled.div`
+  width:400px;
+  height:200px;
+  display:inline-block;
+  background-color: white;
+`;
+const InUpPost = styled.div`
+  width:400px;
+  height:150px;
+  display:inline-block;
+  background-color: blue;
 `;
 
 const Left = () => {
   return (
-    <>
+    <LeftContainer>
       <LeftText><p>ChalsBlog</p></LeftText>
       <button>Github</button>
       <button>Instagram</button>
       <button>Facebook</button>
-    </>
+    </LeftContainer>
   );
 };
 
 const Right = () => {
   return (
-    <>
-      <RightText>꺼라;;</RightText>
-    </>
+    <RightContainer>
+      <RightText><p>최근 게시물</p></RightText>
+      <OutUpPost><InUpPost></InUpPost></OutUpPost>
+    </RightContainer>
   );
 };
 
