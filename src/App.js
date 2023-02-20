@@ -1,6 +1,7 @@
 import './App.css';
 import styled from "styled-components"
 import shiba from "./img/title.png";
+import large from "./img/large.png";
 
 const App = () => {
   return(
@@ -32,7 +33,6 @@ const RightContainer = styled.div`
   width: 100%;
   margin-left: 400px;
   padding: 100px 200px;
-  display: fixed;
   flex-wrap: wrap;
   flex-direction: row;
 `;
@@ -51,10 +51,10 @@ const OutUpPost = styled.div`
 `;
 
 const OutDownPost = styled.div`
-  width:250px;
-  height:250px;
-  display:inline-block;
+  width:400px;
+  height:500px;
   background-color: white;
+  margin: 10px 10px 60px 10px;
 `;
 
 const InUpPost = styled.div`
@@ -67,13 +67,12 @@ const InUpPost = styled.div`
 `;
 
 const InDownPost = styled.div`
-  width:250px;
-  height:250px;
-  display:inline-block;
+  width:400px;
+  height:500px;
   background-color: green;
   display: flex;
   text-align: center;
-  justify-content: center;
+  flex-direction: column;
 `;
 
 const UpPostBox = styled.div`
@@ -83,7 +82,9 @@ const UpPostBox = styled.div`
 `;
 
 const DownPostBox = styled.div`
-  
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 `;
 
 const UpPostTitle = styled.div`
@@ -97,6 +98,17 @@ const UpPostDate = styled.div`
   margin: 0px 0px 0px 58px;
   font-size: small;
   font-weight: lighter;
+`;
+
+const PostImage = styled.img`
+  height: 400px;
+  width: 400px;
+`;
+
+const DownPostTitle = styled.div`
+  font-size: large;
+  font-weight: bold;
+  margin: 10px;
 `;
 
 const Left = () => {
@@ -120,10 +132,10 @@ const Right = () => {
         <OutUpPost><InUpPost><img src={shiba}/><UpPostTitle>감사합니다</UpPostTitle><UpPostDate>2023.02.20</UpPostDate></InUpPost></OutUpPost>
       </UpPostBox>
       <DownPostBox>
-        <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
-        <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
-        <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
-        <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
+        <OutDownPost><InDownPost><PostImage src={large}/><DownPostTitle>집에 가고싶어요</DownPostTitle></InDownPost></OutDownPost>
+        <OutDownPost><InDownPost><PostImage src={large}/><DownPostTitle>208에 사람있어요</DownPostTitle></InDownPost></OutDownPost>
+        <OutDownPost><InDownPost><PostImage src={large}/><DownPostTitle>아....</DownPostTitle></InDownPost></OutDownPost>
+        <OutDownPost><InDownPost><PostImage src={large}/><DownPostTitle>꺼라;;</DownPostTitle></InDownPost></OutDownPost>
       </DownPostBox>
     </RightContainer>
   );
