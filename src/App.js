@@ -31,11 +31,10 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
   width: 100%;
-  display: flex;
+  display: fixed;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
-
 `;
 
 const LeftText = styled.p`
@@ -62,6 +61,26 @@ const InUpPost = styled.div`
   height:150px;
   display:inline-block;
   background-color: blue;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+`;
+
+const OutDownPost = styled.div`
+  width:250px;
+  height:250px;
+  display:inline-block;
+  background-color: white;
+  margin: 100px; 50px; 50px; 50px;
+`;
+const InDownPost = styled.div`
+  width:250px;
+  height:250px;
+  display:inline-block;
+  background-color: green;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 `;
 
 const Left = () => {
@@ -78,10 +97,14 @@ const Left = () => {
 const Right = () => {
   return (
     <RightContainer>
-      <OutUpPost><InUpPost>asdf1</InUpPost></OutUpPost>
-      <OutUpPost><InUpPost>asdf2</InUpPost></OutUpPost>
-      <OutUpPost><InUpPost>asdf3</InUpPost></OutUpPost>
-      <OutUpPost><InUpPost>asdf4</InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>안녕하세요</InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>이거 왜 안되는걸까요</InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>진짜 몰루겠어요</InUpPost></OutUpPost>
+      <OutUpPost><InUpPost>ㅠㅠㅠㅠ</InUpPost></OutUpPost>
+      <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
+      <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
+      <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
+      <OutDownPost><InDownPost>sans1</InDownPost></OutDownPost>
     </RightContainer>
   );
 };
