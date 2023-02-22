@@ -61,13 +61,18 @@ const PostImage = styled.img`
   width: 400px;
 `;
 
+const UpImage = styled.img`
+  height: 100px;
+  width: 101px;
+`;
+
 const Right = () => {
   return (
     <RightContainer>
       <UpPostBox>
         <OutUpPost>
           <InUpPost>
-            <img src={shiba}/>
+            <UpImage src={shiba}/>
             <UpPostTitle>안녕하세요</UpPostTitle>
             <UpPostDate>2023.02.20</UpPostDate>
           </InUpPost>
@@ -75,7 +80,7 @@ const Right = () => {
 
         <OutUpPost>
           <InUpPost>
-            <img src={shiba}/>
+            <UpImage src={shiba}/>
             <UpPostTitle>이 글은</UpPostTitle>
             <UpPostDate>2023.02.20</UpPostDate>
           </InUpPost>
@@ -83,7 +88,7 @@ const Right = () => {
 
         <OutUpPost>
           <InUpPost>
-            <img src={shiba}/>
+            <UpImage src={shiba}/>
             <UpPostTitle>테스트 글입니다</UpPostTitle>
             <UpPostDate>2023.02.20</UpPostDate>
           </InUpPost>
@@ -91,7 +96,7 @@ const Right = () => {
 
         <OutUpPost>
           <InUpPost>
-            <img src={shiba}/>
+            <UpImage src={shiba}/>
             <UpPostTitle>감사합니다</UpPostTitle>
             <UpPostDate>2023.02.20</UpPostDate>
           </InUpPost>
